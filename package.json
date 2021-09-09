@@ -1,6 +1,6 @@
 {
   "name": "blockstore-core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Contains various implementations of the API contract described in interface-blockstore",
   "leadMaintainer": "Alex Potsides <alex.potsides@protocol.ai>",
   "main": "src/index.js",
