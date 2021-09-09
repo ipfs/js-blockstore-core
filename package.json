@@ -1,11 +1,21 @@
 {
   "name": "blockstore-core",
   "version": "0.0.1",
-  "description": "Wrapper implementation for interface-blockstore",
+  "description": "Contains various implementations of the API contract described in interface-blockstore",
   "leadMaintainer": "Alex Potsides <alex.potsides@protocol.ai>",
   "main": "src/index.js",
   "type": "module",
   "types": "types/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "types/src/*"
+      ],
+      "types/*": [
+        "types/src/*"
+      ]
+    }
+  },
   "files": [
     "*",
     "!**/*.tsbuildinfo"
