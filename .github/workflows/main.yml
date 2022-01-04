@@ -148,7 +148,7 @@ jobs:
         run: |
             npm install
             npm run --if-present build
-      - run: npx xvfb-maybe npm run --if-present test:electron-main --bail
+      - run: npx xvfb-maybe npm run --if-present test:electron-main -- --bail
 
   test-electron-renderer:
     needs: check
@@ -175,7 +175,7 @@ jobs:
         run: |
             npm install
             npm run --if-present build
-      - run: npx xvfb-maybe npm run --if-present test:electron-renderer --bail
+      - run: npx xvfb-maybe npm run --if-present test:electron-renderer -- --bail
 
   release:
     needs: [test-node, test-chrome, test-firefox, test-electron-main]
