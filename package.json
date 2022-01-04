@@ -19,6 +19,8 @@
   },
   "files": [
     "*",
+    "!**/*/browser-test",
+    "!**/*/node-test",
     "!**/*.tsbuildinfo"
   ],
   "exports": {
@@ -45,9 +47,8 @@
     "clean": "rimraf dist types",
     "prepare": "aegir build --no-bundle && cp -R types dist",
     "lint": "aegir ts -p check && aegir lint",
-    "build": "aegir build",
+    "build": "aegir build --esm-tests",
     "release": "semantic-release",
-    "pretest": "aegir build --esm-tests",
     "test": "aegir test",
     "test:node": "aegir test -t node",
     "test:browser": "aegir test -t browser",
