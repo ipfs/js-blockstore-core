@@ -51,7 +51,8 @@
     "test": "aegir test",
     "test:node": "aegir test -t node",
     "test:browser": "aegir test -t browser",
-    "test:electron-main": "aegir test -t electron-main",
+    "test:electron-main": "aegir test -t electron-main -f dist/cjs/node-test/*js",
+    "test:electron-renderer": "aegir test -t electron-renderer -f dist/cjs/node-test/*js",
     "dep-check": "aegir dep-check -i rimraf -i interface-blockstore -i interface-store -i aegir -i util"
   },
   "repository": {
