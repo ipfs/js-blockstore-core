@@ -43,6 +43,9 @@
       "sourceType": "module"
     }
   },
+  "publishConfig": {
+    "directory": "dist"
+  },
   "scripts": {
     "clean": "rimraf dist types",
     "prepare": "aegir build --no-bundle && cp -R types dist",
