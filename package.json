@@ -2,38 +2,65 @@
   "name": "blockstore-core",
   "version": "1.0.2",
   "description": "Contains various implementations of the API contract described in interface-blockstore",
-  "main": "src/index.js",
+  "author": "Alex Potsides <alex.potsides@protocol.ai>",
+  "license": "Apache-2.0 OR MIT",
+  "homepage": "https://github.com/ipfs/js-blockstore-core#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ipfs/js-blockstore-core.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ipfs/js-blockstore-core/issues"
+  },
+  "keywords": [
+    "datastore",
+    "interface",
+    "ipfs",
+    "key-value"
+  ],
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
   "type": "module",
-  "types": "types/src/index.d.ts",
+  "types": "./dist/src/index.d.ts",
   "typesVersions": {
     "*": {
       "*": [
-        "types/*",
-        "types/src/*"
+        "*",
+        "dist/*",
+        "dist/src/*",
+        "dist/src/*/index"
       ],
-      "types/*": [
-        "types/*",
-        "types/*"
+      "src/*": [
+        "*",
+        "dist/*",
+        "dist/src/*",
+        "dist/src/*/index"
       ]
     }
   },
   "files": [
-    "*",
-    "!**/*/browser-test",
-    "!**/*/node-test",
+    "src",
+    "dist",
+    "!dist/test",
     "!**/*.tsbuildinfo"
   ],
   "exports": {
     ".": {
+      "types": "./dist/src/index.d.ts",
       "import": "./src/index.js"
     },
     "./base": {
+      "types": "./src/base.d.ts",
       "import": "./src/base.js"
     },
     "./errors": {
+      "types": "./src/errors.d.ts",
       "import": "./src/errors.js"
     },
     "./memory": {
+      "types": "./src/memory.d.ts",
       "import": "./src/memory.js"
     }
   },
@@ -70,15 +97,15 @@
               "release": "patch"
             },
             {
-              "type": "chore",
-              "release": "patch"
-            },
-            {
               "type": "docs",
               "release": "patch"
             },
             {
               "type": "test",
+              "release": "patch"
+            },
+            {
+              "type": "deps",
               "release": "patch"
             },
             {
@@ -108,7 +135,11 @@
               },
               {
                 "type": "docs",
-                "section": "Trivial Changes"
+                "section": "Documentation"
+              },
+              {
+                "type": "deps",
+                "section": "Dependencies"
               },
               {
                 "type": "test",
@@ -119,53 +150,24 @@
         }
       ],
       "@semantic-release/changelog",
-      [
-        "@semantic-release/npm",
-        {
-          "pkgRoot": "dist"
-        }
-      ],
+      "@semantic-release/npm",
       "@semantic-release/github",
       "@semantic-release/git"
     ]
   },
   "scripts": {
-    "clean": "rimraf dist types",
-    "prepare": "aegir build --no-bundle && cp -R types dist",
-    "lint": "aegir ts -p check && aegir lint",
-    "build": "aegir build --esm-tests",
-    "release": "semantic-release",
-    "test": "aegir test",
-    "test:node": "aegir test -t node",
-    "test:chrome": "aegir test -t browser",
+    "clean": "aegir clean",
+    "lint": "aegir lint",
+    "build": "aegir build",
+    "release": "aegir release",
+    "test": "aegir test -t node -t browser -t webworker -t electron-main",
+    "test:node": "aegir test -t node --cov",
+    "test:chrome": "aegir test -t browser --cov",
     "test:chrome-webworker": "aegir test -t webworker",
     "test:firefox": "aegir test -t browser -- --browser firefox",
     "test:firefox-webworker": "aegir test -t webworker -- --browser firefox",
-    "test:electron-main": "aegir test -t electron-main -f dist/cjs/node-test/*js",
-    "test:electron-renderer": "aegir test -t electron-renderer -f dist/cjs/node-test/*js",
-    "dep-check": "aegir dep-check -i rimraf -i interface-blockstore -i interface-store -i aegir -i util"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ipfs/js-blockstore-core.git"
-  },
-  "keywords": [
-    "interface",
-    "key-value",
-    "ipfs",
-    "datastore"
-  ],
-  "author": "Alex Potsides <alex.potsides@protocol.ai>",
-  "license": "(Apache-2.0 OR MIT)",
-  "bugs": {
-    "url": "https://github.com/ipfs/js-blockstore-core/issues"
-  },
-  "homepage": "https://github.com/ipfs/js-blockstore-core#readme",
-  "devDependencies": {
-    "@types/debug": "^4.1.5",
-    "aegir": "^36.1.2",
-    "interface-blockstore-tests": "^2.0.1",
-    "util": "^0.12.4"
+    "test:electron-main": "aegir test -t electron-main",
+    "dep-check": "aegir dep-check"
   },
   "dependencies": {
     "err-code": "^3.0.1",
@@ -176,5 +178,9 @@
     "it-filter": "^1.0.2",
     "it-take": "^1.0.1",
     "multiformats": "^9.4.7"
+  },
+  "devDependencies": {
+    "aegir": "^37.5.1",
+    "interface-blockstore-tests": "^2.0.1"
   }
 }
