@@ -1,3 +1,19 @@
+## [2.0.0](https://github.com/ipfs/js-blockstore-core/compare/v1.0.5...v2.0.0) (2022-08-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* this module is now ESM-only
+
+### Features
+
+* publish as ESM-only ([#45](https://github.com/ipfs/js-blockstore-core/issues/45)) ([01009f6](https://github.com/ipfs/js-blockstore-core/commit/01009f683bbc8b50c202919c448dc0d4cbb86249))
+
+
+### Trivial Changes
+
+* Update .github/workflows/stale.yml [skip ci] ([9e7d0d6](https://github.com/ipfs/js-blockstore-core/commit/9e7d0d6a2e2900b7739a956c371a3a0dcb623f92))
+
 ### [1.0.5](https://github.com/ipfs/js-blockstore-core/compare/v1.0.4...v1.0.5) (2022-01-07)
 
 
