@@ -181,6 +181,6 @@
   },
   "devDependencies": {
     "aegir": "^37.5.1",
-    "interface-blockstore-tests": "^2.0.1"
+    "interface-blockstore-tests": "^3.0.0"
   }
 }
