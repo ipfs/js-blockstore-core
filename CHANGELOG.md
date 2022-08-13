@@ -1,3 +1,12 @@
+## [2.0.1](https://github.com/ipfs/js-blockstore-core/compare/v2.0.0...v2.0.1) (2022-08-13)
+
+
+### Dependencies
+
+* bump interface-blockstore from 2.0.3 to 3.0.0 ([#41](https://github.com/ipfs/js-blockstore-core/issues/41)) ([be1323a](https://github.com/ipfs/js-blockstore-core/commit/be1323a7c4f6deb9d19163c3f6d3ecd57296a25c))
+* bump interface-store from 2.0.2 to 3.0.0 ([#42](https://github.com/ipfs/js-blockstore-core/issues/42)) ([54caf74](https://github.com/ipfs/js-blockstore-core/commit/54caf748cf4277abb7f82a1eefb91bd48141c307))
+* **dev:** bump interface-blockstore-tests from 2.0.4 to 3.0.0 ([#44](https://github.com/ipfs/js-blockstore-core/issues/44)) ([232033d](https://github.com/ipfs/js-blockstore-core/commit/232033db6a8204e2852d4ad29e6d4ff8d1c9a685))
+
 ## [2.0.0](https://github.com/ipfs/js-blockstore-core/compare/v1.0.5...v2.0.0) (2022-08-13)
 
 
