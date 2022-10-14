@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/ipfs/js-blockstore-core/compare/v2.0.1...v2.0.2) (2022-10-14)
+
+
+### Dependencies
+
+* bump multiformats from 9.9.0 to 10.0.0 ([#49](https://github.com/ipfs/js-blockstore-core/issues/49)) ([65b9c3f](https://github.com/ipfs/js-blockstore-core/commit/65b9c3ffeb0d1db1e13ee31104cf693aece9fc28))
+
 ## [2.0.1](https://github.com/ipfs/js-blockstore-core/compare/v2.0.0...v2.0.1) (2022-08-13)
 
 
