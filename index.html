@@ -46,14 +46,14 @@
 <a href="#install" id="install" style="color: inherit; text-decoration: none;">
   <h2>Install</h2>
 </a>
-<pre><code class="language-console">$ npm i blockstore-core
+<pre><code class="language-console"><span class="hl-0">$ </span><span class="hl-1">npm</span><span class="hl-0"> </span><span class="hl-1">i</span><span class="hl-0"> </span><span class="hl-1">blockstore-core</span>
 </code></pre>
 
 <a href="#browser-ltscriptgt-tag" id="browser-ltscriptgt-tag" style="color: inherit; text-decoration: none;">
   <h3>Browser <code>&lt;script&gt;</code> tag</h3>
 </a>
 <p>Loading this module through a script tag will make it&#39;s exports available as <code>BlockstoreCore</code> in the global namespace.</p>
-<pre><code class="language-html"><span class="hl-0">&lt;</span><span class="hl-1">script</span><span class="hl-2"> </span><span class="hl-3">src</span><span class="hl-2">=</span><span class="hl-4">&quot;https://unpkg.com/blockstore-core/dist/index.min.js&quot;</span><span class="hl-0">&gt;&lt;/</span><span class="hl-1">script</span><span class="hl-0">&gt;</span>
+<pre><code class="language-html"><span class="hl-2">&lt;</span><span class="hl-3">script</span><span class="hl-4"> </span><span class="hl-5">src</span><span class="hl-4">=</span><span class="hl-6">&quot;https://unpkg.com/blockstore-core/dist/index.min.js&quot;</span><span class="hl-2">&gt;&lt;/</span><span class="hl-3">script</span><span class="hl-2">&gt;</span>
 </code></pre>
 
 <a href="#implementations" id="implementations" style="color: inherit; text-decoration: none;">
@@ -72,14 +72,14 @@
   <h3>BaseBlockstore</h3>
 </a>
 <p>Provides a complete implementation of the Blockstore interface.  You must implement <code>.get</code>, <code>.put</code>, etc.</p>
-<pre><code class="language-js"><span class="hl-5">import</span><span class="hl-6"> { </span><span class="hl-7">BaseBlockstore</span><span class="hl-6"> } </span><span class="hl-5">from</span><span class="hl-6"> </span><span class="hl-8">&#39;blockstore-core/base&#39;</span><br/><br/><span class="hl-9">class</span><span class="hl-6"> </span><span class="hl-10">MyCustomBlockstore</span><span class="hl-6"> </span><span class="hl-9">extends</span><span class="hl-6"> </span><span class="hl-10">BaseBlockstore</span><span class="hl-6"> {</span><br/><span class="hl-6">  </span><span class="hl-11">put</span><span class="hl-6"> (</span><span class="hl-7">key</span><span class="hl-6">, </span><span class="hl-7">val</span><span class="hl-6">, </span><span class="hl-7">options</span><span class="hl-6">) {</span><br/><span class="hl-6">    </span><span class="hl-12">// store a block</span><br/><span class="hl-6">  }</span><br/><br/><span class="hl-6">  </span><span class="hl-11">get</span><span class="hl-6"> (</span><span class="hl-7">key</span><span class="hl-6">, </span><span class="hl-7">options</span><span class="hl-6">) {</span><br/><span class="hl-6">    </span><span class="hl-12">// retrieve a block</span><br/><span class="hl-6">  }</span><br/><br/><span class="hl-6">  </span><span class="hl-12">// ...etc</span><br/><span class="hl-6">}</span>
+<pre><code class="language-js"><span class="hl-7">import</span><span class="hl-0"> { </span><span class="hl-8">BaseBlockstore</span><span class="hl-0"> } </span><span class="hl-7">from</span><span class="hl-0"> </span><span class="hl-1">&#39;blockstore-core/base&#39;</span><br/><br/><span class="hl-9">class</span><span class="hl-0"> </span><span class="hl-10">MyCustomBlockstore</span><span class="hl-0"> </span><span class="hl-9">extends</span><span class="hl-0"> </span><span class="hl-10">BaseBlockstore</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-11">put</span><span class="hl-0"> (</span><span class="hl-8">key</span><span class="hl-0">, </span><span class="hl-8">val</span><span class="hl-0">, </span><span class="hl-8">options</span><span class="hl-0">) {</span><br/><span class="hl-0">    </span><span class="hl-12">// store a block</span><br/><span class="hl-0">  }</span><br/><br/><span class="hl-0">  </span><span class="hl-11">get</span><span class="hl-0"> (</span><span class="hl-8">key</span><span class="hl-0">, </span><span class="hl-8">options</span><span class="hl-0">) {</span><br/><span class="hl-0">    </span><span class="hl-12">// retrieve a block</span><br/><span class="hl-0">  }</span><br/><br/><span class="hl-0">  </span><span class="hl-12">// ...etc</span><br/><span class="hl-0">}</span>
 </code></pre>
 
 <a href="#memoryblockstore" id="memoryblockstore" style="color: inherit; text-decoration: none;">
   <h3>MemoryBlockstore</h3>
 </a>
 <p>A simple Blockstore that stores blocks in memory.</p>
-<pre><code class="language-js"><span class="hl-5">import</span><span class="hl-6"> { </span><span class="hl-7">MemoryBlockstore</span><span class="hl-6"> } </span><span class="hl-5">from</span><span class="hl-6"> </span><span class="hl-8">&#39;blockstore-core/memory&#39;</span><br/><br/><span class="hl-9">const</span><span class="hl-6"> </span><span class="hl-13">store</span><span class="hl-6"> = </span><span class="hl-9">new</span><span class="hl-6"> </span><span class="hl-11">MemoryBlockstore</span><span class="hl-6">()</span>
+<pre><code class="language-js"><span class="hl-7">import</span><span class="hl-0"> { </span><span class="hl-8">MemoryBlockstore</span><span class="hl-0"> } </span><span class="hl-7">from</span><span class="hl-0"> </span><span class="hl-1">&#39;blockstore-core/memory&#39;</span><br/><br/><span class="hl-9">const</span><span class="hl-0"> </span><span class="hl-13">store</span><span class="hl-0"> = </span><span class="hl-9">new</span><span class="hl-0"> </span><span class="hl-11">MemoryBlockstore</span><span class="hl-0">()</span>
 </code></pre>
 
 <a href="#api-docs" id="api-docs" style="color: inherit; text-decoration: none;">
