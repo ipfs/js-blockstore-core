@@ -1,3 +1,14 @@
+## [4.0.0](https://github.com/ipfs/js-blockstore-core/compare/v3.0.0...v4.0.0) (2023-03-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* `interface-blockstore@5` removes query/batch methods and adds getAll
+
+### Features
+
+* update to latest blockstore interface ([#70](https://github.com/ipfs/js-blockstore-core/issues/70)) ([273397d](https://github.com/ipfs/js-blockstore-core/commit/273397d7fca96db8cf95afc07ed0ea1a7d4239f3))
+
 ## [3.0.0](https://github.com/ipfs/js-blockstore-core/compare/v2.0.2...v3.0.0) (2023-01-06)
 
 
