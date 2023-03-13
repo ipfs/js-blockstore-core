@@ -5,7 +5,6 @@ import { MemoryBlockstore } from '../src/memory.js'
 
 describe('memory', () => {
   describe('interface-datastore', () => {
-    // @ts-ignore
     interfaceBlockstoreTests({
       setup () {
         return new MemoryBlockstore()
