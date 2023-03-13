@@ -49,19 +49,19 @@
   "exports": {
     ".": {
       "types": "./dist/src/index.d.ts",
-      "import": "./src/index.js"
+      "import": "./dist/src/index.js"
     },
     "./base": {
-      "types": "./src/base.d.ts",
-      "import": "./src/base.js"
+      "types": "./dist/src/base.d.ts",
+      "import": "./dist/src/base.js"
     },
     "./errors": {
-      "types": "./src/errors.d.ts",
-      "import": "./src/errors.js"
+      "types": "./dist/src/errors.d.ts",
+      "import": "./dist/src/errors.js"
     },
     "./memory": {
-      "types": "./src/memory.d.ts",
-      "import": "./src/memory.js"
+      "types": "./dist/src/memory.d.ts",
+      "import": "./dist/src/memory.js"
     }
   },
   "eslintConfig": {
@@ -172,16 +172,12 @@
   },
   "dependencies": {
     "err-code": "^3.0.1",
-    "interface-blockstore": "^4.0.0",
-    "interface-store": "^3.0.0",
-    "it-all": "^2.0.0",
-    "it-drain": "^2.0.0",
-    "it-filter": "^2.0.0",
-    "it-take": "^2.0.0",
+    "interface-blockstore": "^5.0.0",
+    "interface-store": "^4.0.0",
     "multiformats": "^11.0.0"
   },
   "devDependencies": {
-    "aegir": "^37.9.0",
-    "interface-blockstore-tests": "^4.0.0"
+    "aegir": "^38.1.7",
+    "interface-blockstore-tests": "^5.0.0"
   }
 }
