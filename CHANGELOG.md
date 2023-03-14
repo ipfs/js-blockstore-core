@@ -1,3 +1,10 @@
+## [4.0.1](https://github.com/ipfs/js-blockstore-core/compare/v4.0.0...v4.0.1) (2023-03-14)
+
+
+### Bug Fixes
+
+* add errors for get and has failed ([#71](https://github.com/ipfs/js-blockstore-core/issues/71)) ([cd990dd](https://github.com/ipfs/js-blockstore-core/commit/cd990dd6ebd4cb0d399b225e501365a3b8653f67))
+
 ## [4.0.0](https://github.com/ipfs/js-blockstore-core/compare/v3.0.0...v4.0.0) (2023-03-13)
 
 
