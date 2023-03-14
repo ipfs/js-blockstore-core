@@ -15,9 +15,19 @@ export function putFailedError (err?: Error): Error {
   return errCode(err, 'ERR_PUT_FAILED')
 }
 
+export function getFailedError (err?: Error): Error {
+  err = err ?? new Error('Get failed')
+  return errCode(err, 'ERR_GET_FAILED')
+}
+
 export function deleteFailedError (err?: Error): Error {
   err = err ?? new Error('Delete failed')
   return errCode(err, 'ERR_DELETE_FAILED')
+}
+
+export function hasFailedError (err?: Error): Error {
+  err = err ?? new Error('Has failed')
+  return errCode(err, 'ERR_HAS_FAILED')
 }
 
 export function notFoundError (err?: Error): Error {
