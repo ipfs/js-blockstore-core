@@ -25,6 +25,11 @@ export function deleteFailedError (err?: Error): Error {
   return errCode(err, 'ERR_DELETE_FAILED')
 }
 
+export function hasFailedError (err?: Error): Error {
+  err = err ?? new Error('Has failed')
+  return errCode(err, 'ERR_HAS_FAILED')
+}
+
 export function notFoundError (err?: Error): Error {
   err = err ?? new Error('Not Found')
   return errCode(err, 'ERR_NOT_FOUND')
