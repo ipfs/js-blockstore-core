@@ -1,3 +1,10 @@
+## [4.0.2](https://github.com/ipfs/js-blockstore-core/compare/v4.0.1...v4.0.2) (2023-03-23)
+
+
+### Dependencies
+
+* update interface-store to 5.x.x ([#74](https://github.com/ipfs/js-blockstore-core/issues/74)) ([32e0e52](https://github.com/ipfs/js-blockstore-core/commit/32e0e52e87c1ec9c245edeec20b3df369d479034))
+
 ## [4.0.1](https://github.com/ipfs/js-blockstore-core/compare/v4.0.0...v4.0.1) (2023-03-14)
 
 
