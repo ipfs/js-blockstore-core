@@ -1,7 +1,6 @@
 import type { Blockstore, Pair } from 'interface-blockstore'
-import type { AbortOptions, Await } from 'interface-store'
+import type { AbortOptions, Await, AwaitIterable } from 'interface-store'
 import type { CID } from 'multiformats/cid'
-import type { AwaitIterable } from 'interface-store'
 
 export class BaseBlockstore implements Blockstore {
   has (key: CID, options?: AbortOptions): Await<boolean> {
