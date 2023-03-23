@@ -4,7 +4,7 @@ import * as raw from 'multiformats/codecs/raw'
 import { CID } from 'multiformats/cid'
 import * as Digest from 'multiformats/hashes/digest'
 import * as Errors from './errors.js'
-import type { AwaitIterable } from 'interface-store'
+import type { Await, AwaitIterable } from 'interface-store'
 import type { Pair } from 'interface-blockstore'
 
 export class MemoryBlockstore extends BaseBlockstore {
@@ -16,11 +16,13 @@ export class MemoryBlockstore extends BaseBlockstore {
     this.data = new Map()
   }
 
-  async put (key: CID, val: Uint8Array): Promise<void> { // eslint-disable-line require-await
+  put (key: CID, val: Uint8Array): Await<CID> { // eslint-disable-line require-await
     this.data.set(base32.encode(key.multihash.bytes), val)
+
+    return key
   }
 
-  async get (key: CID): Promise<Uint8Array> {
+  get (key: CID): Await<Uint8Array> {
     const buf = this.data.get(base32.encode(key.multihash.bytes))
 
     if (buf == null) {
@@ -30,7 +32,7 @@ export class MemoryBlockstore extends BaseBlockstore {
     return buf
   }
 
-  async has (key: CID): Promise<boolean> {
+  has (key: CID): Await<boolean> {
     return this.data.has(base32.encode(key.multihash.bytes))
   }
 
